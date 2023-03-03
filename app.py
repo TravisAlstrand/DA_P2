@@ -1,6 +1,7 @@
 from constants import PLAYERS, TEAMS
 import player_functions
 import team_functions
+import menu_functions
 import copy
 
 
@@ -17,3 +18,5 @@ if __name__ == "__main__":
     player_functions.clean_player_data(new_players)
     # BALANCE TEAMS
     balanced_teams = team_functions.balance_teams(new_teams, new_players)
+    # START MENU
+    menu_functions.menu_start(balanced_teams)
