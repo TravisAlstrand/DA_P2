@@ -20,9 +20,6 @@ def balance_teams(teams, players):
     disperse_players(new_teams, exp_players, True)
     disperse_players(new_teams, no_exp_players, False)
 
-    # SORT PLAYERS BY HEIGHT
-    sort_players(new_teams)
-
     # GET TOTAL PLAYER COUNTS
     get_total_players(new_teams)
 
@@ -49,17 +46,6 @@ def disperse_players(teams, player_list, exp_bool):
                 team["exp_players"].append(popped_player)
             else:
                 team["no_exp_players"].append(popped_player)
-
-
-def sort_players(teams):
-    for team in teams:
-        team["exp_players"].sort(reverse=True, key=get_height)
-        team["no_exp_players"].sort(reverse=True, key=get_height)
-
-
-# RESOURCE - https://www.w3schools.com/python/ref_list_sort.asp
-def get_height(player):
-    return player["height"]
 
 
 def get_total_players(teams):
