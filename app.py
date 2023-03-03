@@ -17,4 +17,3 @@ if __name__ == "__main__":
     player_functions.clean_player_data(new_players)
     # BALANCE TEAMS
     balanced_teams = team_functions.balance_teams(new_teams, new_players)
-    print(balanced_teams)
